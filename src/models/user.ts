@@ -17,6 +17,10 @@ const schema = new Schema({
         type: String,
         required: true
     },
+    role: {
+        type: Number,
+        required: true
+    },
     salt: {
         type: String,
         required: true

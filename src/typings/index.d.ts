@@ -3,6 +3,7 @@ export declare interface UserData {
     firstname: string,
     lastname: string,
     email: string,
+    role: UserRole,
     salt: string,
     hash_password: string,
     createdAt?: string|any,
@@ -19,4 +20,10 @@ export declare interface AdminData {
     },
     createdAt?: string|any,
     updatedAt?: string|any
+}
+
+export const enum UserRole {
+    Customer = 1,
+    Employee = 2,
+    Admin = 3
 }

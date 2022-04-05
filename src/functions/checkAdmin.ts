@@ -2,6 +2,7 @@ import crypto = require("crypto");
 
 import { Admin } from "../models/admin";
 import { User } from "../models/user";
+import { UserRole } from "../typings";
 
 function checkAdmin(): void {
     
@@ -41,6 +42,7 @@ function checkAdmin(): void {
                     firstname: process.env.ADMIN_FIRSTNAME,
                     lastname: process.env.ADMIN_LASTNAME,
                     email: process.env.ADMIN_EMAIL,
+                    role: UserRole.Admin,
                     salt: salt,
                     hash_password: deviredKey.toString('hex'),
                     user_id: 1
