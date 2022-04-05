@@ -1,20 +1,22 @@
 export declare interface UserData {
-    _id: string,
+    _id: number,
     firstname: string,
     lastname: string,
     email: string,
     salt: string,
     hash_password: string,
-    user_id: string,
     createdAt?: string|any,
     updatedAt?: string|any
 }
 
 export declare interface AdminData {
+    _id: string,
     users: number,
     tickets: {
-        open: number,
+        opened: number,
         closed: number,
         total: number
-    }
+    },
+    createdAt?: string|any,
+    updatedAt?: string|any
 }

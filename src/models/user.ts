@@ -1,6 +1,10 @@
 import { Schema, model } from "mongoose";
 import type { UserData } from "../typings";
 const schema = new Schema({
+    _id: {
+        type: Number,
+        required: true
+    },
     firstname: {
         type: String,
         required: true
@@ -21,10 +25,6 @@ const schema = new Schema({
         type: String,
         required: true
     },
-    user_id: {
-        type: String,
-        required: true
-    }
 }, {
     timestamps: true,
     versionKey: false,

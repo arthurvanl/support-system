@@ -1,6 +1,10 @@
 import { Schema, model } from "mongoose";
 import type { AdminData } from "../typings";
 const schema = new Schema({
+    _id: {
+        type: String,
+        required: true
+    },
     users: {
         type: Number,
         required: true
