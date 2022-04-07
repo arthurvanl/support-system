@@ -7,6 +7,7 @@ import mo = require("method-override");
 import type { Application, Request, Response } from "express";
 import type { UserData } from "./typings";
 import { checkAdmin } from "./functions/checkAdmin";
+import { Requests } from "./functions/request";
 
 require("dotenv").config();
 
@@ -48,11 +49,15 @@ mongoose.connect(process.env.DB_URI ?? '')
 .then((res) => {
     console.log("Support System is online!");
     checkAdmin();
+    app.listen(process.env.PORT, () => console.log("HTTP Server is online! (PORT: "+process.env.PORT+")"));
+    
+    new Requests(app, res.connection);
+
+    app.use((req: Request, res: Response) => {
+    
+        res.status(404).render('404');
+    });
 })
 .catch((err: string) => {
     console.error(err);
-});
-
-app.use((req: Request, res: Response) => {
-    res.status(404).render('404');
 });
