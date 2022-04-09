@@ -5,3 +5,84 @@
 .nav-header {
     background: #2A3036 !important;
 }
+
+.bl {
+    color: unset !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.no-txt-dec {
+    color: unset !important;
+    text-decoration: none !important;
+}
+
+.error {
+    display: inline-flex;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    background-color: rgb(208, 17, 36);
+    border-bottom: 1px solid rgb(139, 4, 27);
+    border-left: 1px solid rgb(139, 4, 27);
+}
+
+.error-message {
+    color: white;
+    margin-right: 0.5rem;
+    text-align: left;
+    flex: 1 1 auto;
+}
+
+.error-code {
+    display: flex;
+    background-color: rgb(225, 45, 57);
+    border-radius: 9999px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.75rem;
+    font-weight: 700;
+    max-height: 27px !important;
+    min-height: 27px !important;
+}
+
+.success {
+    display: inline-flex;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    background-color: rgb(17, 208, 33);
+    border-bottom: 1px solid rgb(0, 182, 15);
+    border-left: 1px solid rgb(0, 182, 15);
+}
+
+.success-title {
+    display: flex;
+    background-color: rgb(75, 225, 45);
+    border-radius: 9999px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.75rem;
+    font-weight: 700;
+    max-height: 27px !important;
+    min-height: 27px !important;
+}
+
+.success-message {
+    color: white;
+    margin-right: 0.5rem;
+    text-align: left;
+    flex: 1 1 auto;
+}
