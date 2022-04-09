@@ -1,12 +1,12 @@
 import crypto = require("crypto");
 import { Application, Request, Response } from "express";
 import { User } from "../models/user";
+import { UserRole } from "../typings";
 
 export = {
     name: 'Login',
     href: '/login',
     async execute(app: Application){
-        console.log('asdf0h')
         app.get('/login', (req: Request, res: Response) => {
             res.render('login', {title: this.name});
         });
@@ -24,7 +24,12 @@ export = {
                 }
                 
                 if(user.hash_password == deviredKey.toString('hex')){
-                    console.log("password correct");
+                    req.session.user = user;
+                    if(user.role == UserRole.Customer){
+                        res.redirect('/client');
+                    } else {
+                        res.redirect('/admin');
+                    }
                 } else {
                     console.log("password incorrect");
                 }

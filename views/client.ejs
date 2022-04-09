@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="height: auto; min-height: 100%;">
+<%- include("./partials/head.ejs") %>
+
+<body class="sidebar-mini layout-fixed" style="height: auto;">
+    <div class="wrapper">
+        <%- include("./partials/navbar.ejs") %>
+        <%- include("./partials/sidebar.ejs") %>
+        <div class="content-wrapper" style="min-height: 833px;">
+
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Client</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Client</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="container-fluid">
+                </div>
+            </section>
+
+        </div>
+        <div class="main-footer bl">
+            <div class="float-right d-none d-sm-block">
+                <b>Version</b> 0.0.1
+            </div>
+            <strong>Copyright © <%= new Date(Date.now()).getFullYear() %> <a href="https://arthurvanl.tech">Arthurvanl</a>.</strong> All rights reserved.
+        </div>
+    </div>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/adminlte.js"></script>
+    <script src="plugins/chart.js/Chart.min.js"></script>
+</body>
+
+</html>

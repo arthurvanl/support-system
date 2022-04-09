@@ -1,14 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    <form method="post">
-        
-    </form>
+<html style="height: auto; min-height: 100%;">
+<%- include("./partials/head.ejs") %>
+
+<body class="sidebar-mini layout-fixed" style="height: auto;">
+    <div class="wrapper">
+        <%- include("./partials/navbar.ejs") %>
+        <%- include("./partials/sidebar.ejs") %>
+        <div class="content-wrapper" style="min-height: 833px;">
+
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Register</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Register</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="col-6 col-md-6 col-sm-6 col-xs-6">
+                            <form method="POST">
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" id="email" class="form-control form-control-sm" required="">
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label for="firstname">Firstname</label>
+                                        <input type="text" name="firstname" id="firstname" class="form-control form-control-sm" required="">
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label for="lastname">Lastname</label>
+                                        <input type="text" name="lastname" id="lastname" class="form-control form-control-sm" required="">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control form-control-sm" required="">
+                                        <span class="text-danger" id="password_err"></span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="confirm_pswd">Repeat Password</label>
+                                        <input type="password" name="confirm_pswd" id="confirm_pswd" class="form-control form-control-sm" required="">
+                                        <span class="text-danger" id="confirm_pswd_err"></span>
+                                    </div>
+                                </div>
+                                <hr class="my-4">
+                                <button type="submit" class="btn btn-dark">Sign Up</button>
+                                <span class="btn btn-secondary float-right"><a href="/login" class="no-txt-dec">Login</a></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <div class="main-footer bl">
+            <div class="float-right d-none d-sm-block">
+                <b>Version</b> 0.0.1
+            </div>
+            <strong>Copyright © <%= new Date(Date.now()).getFullYear() %> <a href="https://arthurvanl.tech">Arthurvanl</a>.</strong> All rights reserved.
+        </div>
+    </div>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/adminlte.js"></script>
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
+
 </html>
